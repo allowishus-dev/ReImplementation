@@ -98,11 +98,13 @@ public class SearchTree<T> {
 			}
 			else {
 				// 2 børn
-				int i = getLeft(node.right).key;
-				delete(i);
-				node.key = i;
-			}
-			
+				SearchTreeNode<T> n = getLeft(node.right);
+				int tempKey = n.key;
+				T tempT = n.t; 
+				delete(tempKey);
+				node.key = tempKey;
+				node.t = tempT;
+			}			
 		}
 		else {
 			// hvis mindre left hvis højere right

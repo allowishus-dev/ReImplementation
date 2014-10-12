@@ -1,4 +1,4 @@
-package Set;
+package set;
 
 public class MySet<T> implements ISet<T> {
 	private T[] set = (T[])new Object[10];

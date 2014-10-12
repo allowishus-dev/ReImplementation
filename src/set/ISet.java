@@ -1,4 +1,4 @@
-package Set;
+package set;
 
 public interface ISet<T> {
 	
