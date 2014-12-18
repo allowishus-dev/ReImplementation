@@ -6,13 +6,18 @@ public class Test {
 
 	@org.junit.Test
 	public void test() {
-		Stack stack = new Stack();
+		Stack<String> stack = new Stack<String>();
 		stack.push("First");
-		stack.push("Node");
-		stack.push("Node");
-		stack.push("Node");
-		stack.push("Node");
+		stack.push("Node2");
+		stack.push("Node3");
+		stack.push("Node4");
+		stack.push("Node5");
 		stack.push("Last");
+		
+		assertEquals("Peek fail!", "Last", stack.peek());
+		
+		stack.pop();
+		assertEquals("Peek fail!", "Node5", stack.pop());
 	}
 
 }
